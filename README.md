@@ -19,25 +19,45 @@ The system automatically prevents overlapping bookings and disables fully booked
 1. Clone the repository:
 
 git clone https://github.com/afifrayhan/hotel-booking-task-afif-rayhan.git
+
 cd hotel-booking-task-afif-rayhan
 
 2. Install dependencies:
 
 composer install
+
 npm install
+
 npm run build
 
 3. Environment Setup:
 
 cp .env.example .env
+
 php artisan key:generate
 
-4. Run the application:
+4. Database Setup in .env:
+
+DB_CONNECTION=sqlite
+
+DB_DATABASE=database/database.sqlite
+
+#Make a database.sqlite file inside database if missing
+
+5. Run the migrations:
+
+php artisan migrate --seed
+
+6. Run the application:
+
 php artisan serve
+
 Open in your browser: http://localhost:8000
 
 5. Default Pages:
 
 / → Home / Booking Page
+
 /check-availability → Room Availability Checker
+
 /bookings → Booking Confirmation
