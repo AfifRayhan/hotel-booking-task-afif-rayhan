@@ -37,6 +37,7 @@ cp .env.example .env
 php artisan key:generate
 
 4. Database Setup in .env:
+COMMENT/REMOVE THE MYSQL (I did the project with MySQL first and changed it to SQLite later)
 
 DB_CONNECTION=sqlite
 
